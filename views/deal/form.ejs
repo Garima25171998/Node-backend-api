@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%-include('../layout/header.ejs')%>
+<%-include('../layout/meta-setting.ejs')%>
+<%-include('../layout/nav.ejs')%>
+<!-- content -->
+  <div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+	    
+<div class="bg-light lter b-b wrapper-md">
+<h4 class="m-n font-thin "style="color:red;">Create Deal </h4>
+</div>
+<div class="wrapper-md" ng-controller="FormDemoCtrl">
+  <form class="form-horizontal" role="form" enctype="multipart/form-data" method="post" action='/deals/createdeal' >
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+      <div class="panel-heading"><b>Deal Information</b>  </div>
+        <!-- <div class="panel-heading font-bold">Add Slider</div> -->
+        <div class="panel-body">
+       
+                  <div class="col-md-6 form-group">  
+                    <label class="col-md-3 control-label">Deal ID <span class="text-danger">*</span> :</label> 
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" placeholder="Enter Your deal ID" name="deal_id">
+                    </div>
+                  </div>
+
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Deal Owner <span class="text-danger">*</span> : </label>
+                      <div class="col-md-9">
+                      <select name="deal_owner" id="deal_owner" class="form-control"  required>
+                        <option  selected disabled> Deal Owner </option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                      </select> 
+                    </div>
+                    </div>
+                  
+                    
+                    <div class="form-group  col-md-6 ">
+                      <label style="padding-left: 0px;" class="control-label col-sm-3" >Comapny Name:</label>
+                      <div class="col-sm-9">
+                        <div class="input-group">
+                          <span class="input-group-addon  " style="color:gray;font-size:20px;background:white; border-right:0px;"><i class="fa fa-building"></i></span>
+                          <select name="company_name" id="company_name" class="form-control"  style="border-left:0px;"   >
+                            <option  selected disabled> Lead Owner </option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                          </select>
+                          <span class="input-group-addon " style="color:red;font-size:20px;background:white;border-radius: 0px;">+</span>
+                      </div>
+                      </div>
+                    </div>    
+                  
+                    <div class="form-group  col-md-6 ">
+                      <label class="control-label col-sm-3" >Contact :</label>
+                      <div class="col-sm-9">
+                        <div class="input-group">
+                          <span class="input-group-addon  " style="color:gray;font-size:20px;background:white;border-radius: 0px; border-right:0px;"><i class="fa fa-user"></i></span>
+                          <input type="text" class="form-control " aria-describedby="inputGroupSuccess2Status" placeholder="Select Contact" name="contact" style="border-left:0px;">
+                          <span class="input-group-addon " style="color:red;font-size:20px;background:white;border-radius: 0px;">+</span>
+                      </div>
+                      </div>
+                    </div>    
+
+
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label" style="padding-left: 0;">Deal Source <span class="text-danger">*</span> : </label>
+                      <div class="col-md-9">
+                      <select name="deal_source" id="deal_source" class="form-control"  required>
+                        <option  selected disabled> Deal Source </option>
+                        <option value=""></option>
+                      </select> 
+                      </div>
+                      </div>
+
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Deal Title : </label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" placeholder="Enter Your DealTitle" name="deal_title">
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Deal Type : </label>
+                      <div class="col-md-9">
+                        <select name="deal_type" id="deal_type" class="form-control"  required>
+                          <option  selected disabled> Deal Type </option>
+                          <option value=""></option>               
+                        </select> 
+                      </div>
+                    </div>
+
+                  <div class="col-md-6 form-group">
+                    <label class="col-md-3 control-label">Referral : </label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" placeholder="Enter Your Referral" name="referral">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Industry  <span class="text-danger">*</span> : </label>
+                      <div class="col-md-9">
+                        <select name="industry" id="industry" class="form-control"  required>
+                          <option  selected disabled> Industry </option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select> 
+                      </div>
+                  </div>
+
+                  <div class="col-md-6 form-group">
+                    <label class="col-md-3 control-label" style="padding-left: 0;padding-right: 0;">Estimates Value <span class="text-danger">*</span> : </label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" placeholder="Enter Your Referral" name="deal_stimated_value">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Deal Status <span class="text-danger">*</span> : </label>
+                      <div class="col-md-9">
+                      <select name="deal_status_stage" id="deal_status_stage" class="form-control"  required>
+                        <option  selected disabled> Deal Status </option>
+                        <option value=""></option>
+                      </select> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                <!-------start content2-->
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading font-bold">Account Information </div> 
+                    <div class="panel-body">
+                   
+                      <div class="col-md-6 form-group">
+                        <label class="col-md-3 control-label">Industry  : </label>
+                        <div class="col-md-9">
+                        <select name="" id="" class="form-control"  required>
+                          <option  selected disabled> Select Industry</option>
+                          <option value="">drs</option>
+                          <option value="">vf</option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select> 
+                      </div>
+                      </div>
+                
+                      <div class="col-md-6 form-group">
+                        <label class="col-md-3 control-label">Country  : </label>
+                        <div class="col-md-9">
+                        <select name="" id="" class="form-control"  required>
+                          <option  selected disabled> Select Country  </option>
+                          <option value="">drs</option>
+                          <option value="">vf</option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select> 
+                      </div>
+                      </div>
+                
+                      <div class="col-md-6 form-group">
+                        <label class="col-md-3 control-label">State   : </label>
+                        <div class="col-md-9">
+                        <select name="" id="" class="form-control"  required>
+                          <option  selected disabled> Select State  </option>
+                          <option value="">drs</option>
+                          <option value="">vf</option>
+                          <option value=""></option>
+                        </select> 
+                      </div>
+                      </div>
+                
+                      <div class="col-md-6 form-group">
+                        <label class="col-md-3 control-label">City   : </label>
+                        <div class="col-md-9">
+                        <select name="" id="" class="form-control"  required>
+                          <option  selected disabled> Select City </option>
+                          <option value="">drs</option>
+                          <option value="">vf</option>
+                          <option value=""></option>
+                        </select> 
+                      </div>
+                      </div>
+                
+                      <div class="col-md-12 form-group">   
+                        <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Location :  </label>
+                        <div class="col-md-10" style="width: 83.933379%;padding-left:6px;">
+                        <input type="text"  class="form-control " placeholder="Enter Location" name="account_id"/>
+                      </div>  
+                      </div>  
+                
+                      <div class="col-md-6 form-group">
+                        <label class="col-md-3 control-label">GST : </label>
+                        </label> 
+                        <div class="col-md-9">
+                        <input type="text"  class="form-control " placeholder="Enter GST" name="gst"/>
+                      </div>
+                      </div>
+                
+                      <div class="col-md-6 form-group">
+                        <label class="col-md-3 control-label">PAN : </label>
+                        </label> 
+                      <div class="col-md-9">
+                        <input type="text"  class="form-control " placeholder="Enter GST" name="pan"/>
+                      </div>
+                      </div>
+                
+                      <div class="col-md-6 form-group">
+                        <label class="col-md-3 control-label">TAN : </label>
+                        </label> 
+                      <div class="col-md-9">
+                        <input type="text"  class="form-control " placeholder="Enter TAN" name="tan"/>
+                      </div>
+                      </div> 
+                                 
+                      <div class="col-md-6 form-group">
+                        <label class="col-md-3 control-label">CIN : </label>
+                        </label> 
+                      <div class="col-md-9">
+                        <input type="text"  class="form-control " placeholder="Enter CIN" name="tan"/>
+                      </div>
+                      </div>       
+                        
+            </div>
+            </div>
+          </div>
+        </div>
+            <!-------end content2-->
+                    <!-------start content3-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading font-bold">Contact Information</div> 
+                  <div class="panel-body">
+                 
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Role : </label>
+                      </label> 
+                      <div class="col-md-9">
+                      <input type="text"  class="form-control " placeholder="" name=""/>
+                    </div>
+                    </div>
+              
+              
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Contact Name : </label>
+                      <div class="col-md-9">
+                      <select name="" id="" class="form-control"  required>
+                        <option  selected disabled>   </option>
+                        <option value="">drs</option>
+                        <option value="">vf</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                      </select> 
+                    </div>
+                    </div>
+              
+                    
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">phone : </label>
+                      </label> 
+                      <div class="col-md-9">
+                      <input type="text"  class="form-control " placeholder="" name=""/>
+                    </div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Mobile </label>
+                      </label> 
+                    <div class="col-md-9">
+                      <input type="text"  class="form-control " placeholder="" name=""/>
+                    </div>
+                    </div>
+              
+                    <div class="col-md-6 form-group">
+                      <label class="col-md-3 control-label">Email </label>
+                      </label> 
+                    <div class="col-md-9">
+                      <input type="text"  class="form-control " placeholder="" name=""/>
+                    </div>
+                    </div> 
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- End content3 -->
+<!---------start content4-->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading font-bold">Remark :</div> 
+      <div class="panel-body">
+     
+        <div class="col-md-12 form-group">  
+          
+            <input type="text" class="form-control" placeholder="remark" name="remark">
+          </div>
+        </div>   
+          
+</div>
+</div>
+</div>
+<!---------end content4-->
+             <!-------start content5-->
+          <div class="row">
+            <div class="col-sm-12" >
+              <div class="panel panel-default">
+              <div class="panel-body">
+
+        <div class="col-md-12 form-group">   
+        <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Product/Service:  </label>
+        <div class="col-md-8" style="width:80.933379%;padding-left:6px;">
+        <input type="text"  class="form-control " placeholder="Product/Service" name="product_services" style="font-size:12px;"/>
+        </div>  
+     
+               
+              <button class="btn-danger mt--2" style="height:32px; width:32px;">+</button>
+            
+            </div>
+            <div class="row">
+              <div class="col-md-12 " style="padding:0px;">   
+         <table class="table">
+         <thead>
+                          <tr style="background:#FFE5E5;">
+                              <th>type</th>
+                              <th>Part No </th>
+                              <th>CCN No</th>
+                              <th>Product Code</th>
+                              <th>item Description</th>
+                              <th>HSN No</th>
+                              <th>HSN No</th>
+                              <th>Price</th>
+                              <th>Price</th>
+                              <th>GST</th>
+                              <th></th>
+                              
+                            
+                          </tr>
+                          <tr><th>
+                            <a href="" style="color:blue">Product</a></th>
+                              <th>31000-070 </th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th><i class="fa fa-pencil-square-o " aria-hidden="true"></i>
+                                <i  class="fa fa-trash"  aria-hidden="true"></i></th>
+                              </tr>
+                      </thead>
+         </table>
+        </div>
+        </div>
+         </div>           
+        </div>
+        </div>
+      </div>
+          <!-------end content5-->
+          <!------end content6-->
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="panel panel-default">
+              <div class="panel-heading font-bold">Note</div> 
+              <div class="panel-body">
+            
+
+                <div class="col-md-12 form-group">  
+                  
+                    <input type="text" class="form-control" placeholder="Enter Note" name="note">
+                  </div>
+                </div>   
+                  
+      </div>
+      </div>
+    </div>
+      <!-- End content6 -->
+       <!------end content7-->
+       <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+          
+            <div class="panel-body">
+              <div class="col-md-12">
+                <div class="col-md-10 ">
+               <b> Attachment</b>
+               </div>
+               <div  style="text-align: right;padding-right:18px;">
+                <b> Attach <i class="fa fa-paperclip " aria-hidden="true"></i></b>
+                </div>
+               </div>
+              <br>
+              <br>
+              <div class="row">
+              <div class="col-md-12"  style="padding:0px;">   
+               <table class="table">
+               <thead>
+                                <tr style="background:#FFE5E5; ">
+                                    <th>File Name</th>
+                                    <th>Attach By </th>
+                                    <th>Date added</th>
+                                    <th>Size</th>
+                                    <th></th>
+                                 
+                                </tr>
+                                <tr><th>
+                                  <a href="" style="color:blue">Product</a></th>
+                                    <th>31000-070 </th>
+                                    <th></th>
+                                    <th></th>
+                                    <th><i class="fa fa-pencil-square-o " aria-hidden="true"></i>
+                                    <i  class="fa fa-trash"  aria-hidden="true"></i></th>
+                                    </tr>
+                            </thead>
+               </table>
+              </div>
+              </div>
+              </div>
+    </div>
+    </div>
+  </div>
+  <!--end -->        
+<!------end content8-->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading font-bold">Sales Order No:</div> 
+      <div class="panel-body">
+    
+
+        <div class="col-md-12 form-group">  
+          
+            <input type="text" class="form-control" placeholder="Enter Order Sales number" name="so_no">
+          </div>
+        </div>   
+          
+</div>
+</div>
+</div>
+<!-- End content8 -->
+       <!----content9----->
+  <div class="row">
+    <div class="col-sm-12">
+    <div class="panel panel-default">
+      
+    <div class="panel-body">
+    <div class="col-md-12">
+    <div class="col-md-9 ">
+   <b>Open activity</b>
+   </div>
+   <div  style="text-align: right;">
+   <button style="border:1px solid red; width:50px; background:white; color:red;border-radius:5px;">+Task </button>
+   <button style="border:1px solid red;background:white;width:70px; color:red;border-radius:5px;">+Metting </button>
+   <button style="border:1px solid red; width:50px;  background:white;color:red;border-radius:5px;">+call</button>
+    </div>
+   </div>
+  <br>
+  <br>
+  <div class="row " >
+  <div class="col-md-12 "  style="padding:0px;">   
+   <table class="table">
+   <thead>
+                    <tr style="background:#FFE5E5;">
+                        <th>Subject</th>
+                        <th>Activity Type </th>
+                        <th>status</th>
+                        <th>Due Date</th>
+                        <th>Form</th>
+                        <th>to</th>
+                        <th>Call start Time</th>
+                        <th>Activity Owner</th>
+                        <th>Modified Time</th>
+                     
+                    </tr>
+                    <tr><th>
+                      <a href="" style="color:blue">task</a></th>
+                        <th> </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                       
+                        </tr>
+                </thead>
+   </table>
+  </div>
+ </div>
+    </div>
+   </div>  
+   <!---- end content9----->            
+                    <!----content10----->
+                    <div class="row">
+                      <div class="col-sm-12">
+                      <div class="panel panel-default">
+                          <div class="panel-heading"> <b>Close activity</b></div>
+                      <div class="panel-body">
+  
+                      <center>No History</center>
+                   
+                      </div>
+                     </div>  
+                     <!---- end content10----->
+<!------end content11-->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading font-bold">NICO Terms:</div> 
+      <div class="panel-body">
+    
+
+        <div class="form-group  col-md-12 ">
+            <div class="input-group">
+              <input type="text" class="form-control " aria-describedby="inputGroupSuccess2Status" placeholder="Search" name="inco_terms">
+              <span class="input-group-addon " style="color:red;font-size:20px;background:white;border-radius: 0px;">+</span>
+          </div>
+          </div>
+        </div>    
+
+          
+</div>
+</div>
+</div>
+<!-- End content11-->
+                 
+<!------end content12-->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading font-bold">Payment Terms:</div> 
+      <div class="panel-body">
+    
+
+        <div class="form-group  col-md-12 ">
+            <div class="input-group">
+              <input type="text" class="form-control " aria-describedby="inputGroupSuccess2Status" placeholder="Search" name="payment_terms">
+              <span class="input-group-addon " style="color:red;font-size:20px;background:white;border-radius: 0px;">+</span>
+          </div>
+          </div>
+        </div>    
+
+          
+</div>
+</div>
+</div>
+<!-- End content12-->
+<!-- start content13-->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading font-bold">Terms & Conditions</div> 
+      <div class="panel-body">
+    
+        <div class="col-md-12 form-group">   
+          <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">P&F:  </label>
+          <div class="col-md-10" style="width:83.933379%;padding-left:6px;">
+            <select name="p_f" id="p_f" class="form-control"  required>
+              <option  selected disabled>Select P&F   </option>
+              <option value="">drs</option>
+             
+            </select>
+          </div>  
+        </div>   
+           
+        <div class="col-md-12 form-group">   
+          <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Freight:  </label>
+          <div class="col-md-10" style="width:83.933379%;padding-left:6px;">
+            <select name="freight" id="freight" class="form-control"  required>
+              <option  selected disabled>Select Freight   </option>
+              <option value="">drs</option>
+             
+            </select>
+          </div>  
+        </div>   
+        <div class="col-md-12 form-group">   
+          <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Taxes:  </label>
+          <div class="col-md-10" style="width:83.933379%;padding-left:6px;">
+            <select name="" id="" class="form-control"  required>
+              <option  selected disabled>Select Taxes  </option>
+              <option value="">drs</option>
+             
+            </select>
+          </div>  
+        </div>   
+        <div class="col-md-12 form-group">   
+          <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Other:  </label>
+          <div class="col-md-10" style="width:83.933379%;padding-left:6px;">
+            <select name="other_charges" id="other_charges" class="form-control"  required>
+              <option  selected disabled>Select Other  </option>
+              <option value="">drs</option>
+             
+            </select>
+          </div>  
+        </div>   
+          
+        <div class="col-md-6 form-group">
+          <label class="col-md-3 control-label">Delivery: </label>
+          <div class="col-md-9">
+          <select name="delivery" id="delivery" class="form-control"  required>
+            <option  selected disabled> Select Delivery  </option>
+            <option value="">drs</option>
+            <option value="">vf</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select> 
+        </div>
+        </div>
+
+        <div class="col-md-6 form-group">
+          <label class="col-md-3 control-label">Warranty : </label>
+          <div class="col-md-9">
+          <select name="warranty" id="warranty" class="form-control"  required>
+            <option  selected disabled> Select  Warranty </option>
+            <option value="">drs</option>
+            <option value="">vf</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select> 
+        </div>
+        </div>
+
+        <div class="col-md-12 form-group">   
+          <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Comapny Name :  </label>
+          <div class="col-md-10" style="width:83.933379%;padding-left:6px;">
+          <div class="col-md-1 deal_div" style="border: 1px solid black;"> 
+            <input type="radio"  placeholder="Enter Account Holder Company Name" name="account_id" style="font-size:12px;"/> 7 Days
+          </div>
+          <div class="col-md-1 deal_div" style="border: 1px solid black;"> 
+            <input type="radio"  placeholder="Enter Account Holder Company Name" name="account_id" style="font-size:12px;"/> 15 Days
+          </div>
+          <div class="col-md-1 deal_div" style="border: 1px solid black;"> 
+            <input type="radio"  placeholder="Enter Account Holder Company Name" name="account_id" style="font-size:12px;"/> 30 Days
+          </div>
+          <div class="col-md-1 deal_div" style="border: 1px solid black;"> 
+            <input type="radio"  placeholder="Enter Account Holder Company Name" name="account_id" style="font-size:12px;"/> 60 Days
+          </div>
+          <div class="col-md-1 deal_div" style="border: 1px solid black;"> 
+            <input type="radio"  placeholder="Enter Account Holder Company Name" name="" style="font-size:12px;"/> 90 Days
+          </div>
+          <div class="col-md-1 deal_div" style="border: 1px solid black;"> 
+            <input type="radio"  placeholder="Enter Account Holder Company Name" name="" style="font-size:12px;"/> Other
+          </div>
+          </div>  
+        </div>   
+</div>
+
+</div>
+<!-- end content13-->
+                   
+                     
+                   
+                    
+
+                    <div class="row">
+                      <div class="col-sm-12">
+                      <div style="border:2px dashed red; ">  
+                      <div class="panel-body">
+
+                        <div class="col-md-6 form-group">
+                          <label class="col-md-3 control-label">Prepared By : </label>
+                          <div class="col-md-9">
+                          <select name="" id="" class="form-control"  required>
+                            <option  selected disabled> Select user</option>
+                            <option value="">drs</option>
+                            <option value="">vf</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                          </select> 
+                        </div>
+                        </div>
+
+                    <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">Modified By : </label>
+        <div class="col-md-9">
+        <select name="" id="" class="form-control"  required>
+          <option  selected disabled> Select User</option>
+          <option value="">drs</option>
+          <option value="">vf</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select> 
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">Verified By  : </label>
+        <div class="col-md-9">
+        <select name="" id="" class="form-control"  required>
+          <option  selected disabled> Select User</option>
+          <option value="">drs</option>
+          <option value="">vf</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select> 
+      </div>
+      </div>
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">Approved By  : </label>
+        <div class="col-md-9">
+        <select name="" id="" class="form-control"  required>
+          <option  selected disabled> Select User</option>
+          <option value="">drs</option>
+          <option value="">vf</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select> 
+      </div>
+      </div></div></div>
+        </form>
+     
+        <div >
+        <div  style="text-align: right; margin:10px 0px;" >
+        <button type="cancel" class="btn btn-dark" >Cancel</button>
+        <button type="submit" class="btn btn-danger">Save</button>
+       
+        </div>
+        
+</div>
+      </div>
+    </div>  
+  </div> 
+</div>
+</div>
+</div>
+<%-include('../layout/footer.ejs')%>
+</html>

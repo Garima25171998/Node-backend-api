@@ -1,0 +1,292 @@
+<%-include('../layout/header.ejs')%>
+<%-include('../layout/meta-setting.ejs')%>
+<%-include('../layout/nav.ejs')%>
+
+<!-- content1 -->
+<div id="content" class="app-content" role="main">
+<div class="app-content-body ">
+<div class="bg-light lter b-b wrapper-md">
+<h4 class="m-n font-thin " style="color:red;">Create Account</h4>
+</div>
+<div class="wrapper-md" ng-controller="FormDemoCtr5">
+  <form class="form-horizontal"  role="form" enctype="multipart/form-data" method="post" action='/'>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">Account Source</div> 
+        <div class="panel-body">
+       
+       
+          <div class="col-md-6 form-group">  
+            <label class="col-md-3 control-label">Account ID <span class="text-danger">*</span> :</label> 
+            <div class="col-md-9">
+              <input type="text" class="form-control" placeholder="" name="deal ID">
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label class="col-md-3 control-label">Account Owner  : </label>
+            <div class="col-md-9">
+            <select name="Deal Owner" id="Deal Owner" class="form-control"  required>
+              <option  selected disabled> Account Owner </option>
+              <option value="">drs</option>
+              <option value="">vf</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select> 
+          </div>
+          </div>
+             
+</div>
+</div>
+<!-- End content1 -->
+ <!-- content 2-->
+
+<div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+       <div class="panel-heading font-bold">Account Information</div>
+       <div class="panel-body">
+
+       <div class="col-md-12 form-group">   
+        <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Comapny Name :  </label>
+        <div class="col-md-10" style="width:83.933379%;padding-left:6px;">
+        <input type="text"  class="form-control " placeholder="Enter Account Holder Company Name" name="account_id" style="font-size:12px;"/>
+        </div>  
+      </div>   
+     
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">Industry  : </label>
+        <div class="col-md-9">
+        <select name="" id="" class="form-control"  required>
+          <option  selected disabled> Select Industry</option>
+          <option value="">drs</option>
+          <option value="">vf</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select> 
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">Country  : </label>
+        <div class="col-md-9">
+        <select name="" id="" class="form-control"  required>
+          <option  selected disabled> Select Country  </option>
+          <option value="">drs</option>
+          <option value="">vf</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select> 
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">State   : </label>
+        <div class="col-md-9">
+        <select name="" id="" class="form-control"  required>
+          <option  selected disabled> Select State  </option>
+          <option value="">drs</option>
+          <option value="">vf</option>
+          <option value=""></option>
+        </select> 
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">City   : </label>
+        <div class="col-md-9">
+        <select name="" id="" class="form-control"  required>
+          <option  selected disabled> Select City </option>
+          <option value="">drs</option>
+          <option value="">vf</option>
+          <option value=""></option>
+        </select> 
+      </div>
+      </div>
+
+      <div class="col-md-12 form-group">   
+        <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Location :  </label>
+        <div class="col-md-10" style="width: 83.933379%;padding-left:6px;">
+        <input type="text"  class="form-control " placeholder="Enter Location" name="account_id"/>
+      </div>  
+      </div>  
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">GST : </label>
+        </label> 
+        <div class="col-md-9">
+        <input type="text"  class="form-control " placeholder="Enter GST" name="gst"/>
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">PAN : </label>
+        </label> 
+      <div class="col-md-9">
+        <input type="text"  class="form-control " placeholder="Enter GST" name="pan"/>
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">TAN : </label>
+        </label> 
+      <div class="col-md-9">
+        <input type="text"  class="form-control " placeholder="Enter TAN" name="tan"/>
+      </div>
+      </div> 
+                 
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">CIN : </label>
+        </label> 
+      <div class="col-md-9">
+        <input type="text"  class="form-control " placeholder="Enter CIN" name="tan"/>
+      </div>
+      </div>       
+      
+      <div class="form-group  col-md-6 ">
+        <label class="control-label col-sm-3" for="inputGroupSuccess2">Phone No:</label>
+        <div class="col-sm-9">
+          <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input type="text" class="form-control" aria-describedby="inputGroupSuccess2Status" placeholder="Enter 10 digit Phone Number " name="phone">
+          </div>
+        </div>
+      </div>     
+
+      
+
+      <div class="form-group  col-md-6 ">
+        <label class="control-label col-sm-3" for="inputGroupSuccess2">Mobile No:</label>
+        <div class="col-sm-9">
+          <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input type="text" class="form-control" aria-describedby="inputGroupSuccess2Status" placeholder="Enter 10 digit Mobile Number " name="mobile">
+          </div>
+        </div>
+      </div>    
+      <div class="col-md-6 form-group">
+         <label class="col-md-3 control-label">Email : </label>
+         </label> 
+         <div class="col-md-9">
+         <input type="text"  class="form-control " placeholder="Enter Email Address" name="tan"/>
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label style="padding-left:0px;" class="col-md-3 control-label">Secondery Email: </label>
+        </label> 
+        <div class="col-md-9">
+        <input type="text"  class="form-control " placeholder="Enter Secondery Email " name="tan"/>
+      </div>
+      </div> 
+  </div>
+</div>
+ <!--End  content 2-->
+ <!--Start Conten3-->
+ <div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading font-bold">Address Information</div> 
+      <div class="panel-body">
+
+        <div class="col-md-12 form-group">   
+          <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Address Line 1:  </label>
+        <div class="col-md-10" style="width: 83.933379%;padding-left:6px;">
+          <input type="text"  class="form-control " placeholder="Enter Your Completed Address" name="account_id"/>
+        </div>  
+        </div> 
+     
+        <div class="col-md-12 form-group">   
+          <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Address Line 2:  </label>
+        <div class="col-md-10" style="width: 83.933379%;padding-left:6px;">
+          <input type="text"  class="form-control " placeholder="Enter Your Completed Address" name="account_id"/>
+        </div>  
+        </div> 
+
+        <div class="col-md-12 form-group">   
+          <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Address Line 3:  </label>
+        <div class="col-md-10" style="width:83.933379%;padding-left:6px;">
+          <input type="text"  class="form-control " placeholder="Enter Your Completed Address" name="account_id"/>
+        </div>  
+        </div>
+       
+        <div class="col-md-6 form-group">
+          <label class="col-md-3 control-label">Country  : </label>
+          <div class="col-md-9">
+          <select name="" id="" class="form-control"  required>
+            <option  selected disabled> Select Country  </option>
+            <option value="">drs</option>
+            <option value="">vf</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select> 
+        </div>
+        </div>
+  
+        <div class="col-md-6 form-group">
+          <label class="col-md-3 control-label">State   : </label>
+          <div class="col-md-9">
+          <select name="" id="" class="form-control"  required>
+            <option  selected disabled> Select State  </option>
+            <option value="">drs</option>
+            <option value="">vf</option>
+            <option value=""></option>
+          </select> 
+        </div>
+        </div>
+  
+        <div class="col-md-6 form-group">
+          <label class="col-md-3 control-label">City   : </label>
+          <div class="col-md-9">
+          <select name="" id="" class="form-control"  required>
+            <option  selected disabled> Select City </option>
+            <option value="">drs</option>
+            <option value="">vf</option>
+            <option value=""></option>
+          </select> 
+        </div>
+        </div>
+
+        <div class="col-md-6 form-group">
+          <label class="col-md-3 control-label">Zip Code: </label>
+          </label> 
+        <div class="col-md-9">
+          <input type="text"  class="form-control " placeholder="Enter zip" name="zip"/>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!------end content3-->
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="panel panel-default">
+              <div class="panel-heading font-bold">Remark :</div> 
+              <div class="panel-body">
+           
+             
+                <div class="col-md-12 form-group">  
+                  
+                    <input type="text" class="form-control" placeholder="Remark" name="deal ID">
+                  </div>
+                </div>   
+                  
+      </div>
+      </div>
+    </form>
+    <div  style="text-align: right; margin:10px 0px;margin-right:16px;" >
+      <button type="cancel" class="btn btn-dark" >Cancel</button>
+      <button type="submit" class="btn btn-danger">Save</button>
+     
+      </div>
+      <!-- End content1 -->
+</div>
+</div>
+</div>
+
+    
+<%-include('../layout/footer.ejs')%>  

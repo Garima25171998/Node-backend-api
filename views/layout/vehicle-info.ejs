@@ -1,0 +1,595 @@
+<%- include ../layout/header %>
+<%- include ../layout/meta-setting %>
+<%- include ../layout/nav %>
+<!-- content -->
+
+<div id="content" class="app-content" role="main">
+	<div class="app-content-body ">
+		<!-- main header -->
+		<div class="bg-white b-b-none wrapper-md">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<h4 class="m-n font-bold ">Insurance Portal</h4>
+				</div>
+				<!-- <div class="col-sm-6 text-right poppins hidden-xs">
+					<button class="btn m-b-xs w-xs btn-sm text-10 btn-default btn-3d m-r-xs"><i class="icon-settings"></i> Action</button>
+					<button class="btn m-b-xs btn-sm text-10 btn-success btn-3d"><i class="fa fa-plus"></i> Create Quotation</button>
+				</div> -->
+			</div>
+		</div>
+		<!-- / main header -->
+		<div class="">
+			<div class="row m-t-10">
+				<div class="col-md-12 m-t-10">
+					<div class="col-md-3">
+						<div class="bg-white">
+							<div class="quoteInfo">
+								<div class="quoteHead">
+									<img src="../img/portal-user.png">
+									<p>
+										<span>Quote Id <strong>#PA-3011</strong></span>
+										<span>Date: <strong>23 May 2020</strong></span>
+									</p>
+								</div>
+								<ul>
+								    <li>Gyanendra Singh <span class="badge">New Qutotaion</span></li>
+								    <li>XUV 300</li>
+								    <li>PA-3011</li>
+								</ul>
+							</div>
+							<div class="quoteTab">
+								<ul>
+								    <li class="active"><a data-toggle="pill" href="#customerInfo">Customer Information</a></li>
+								    <li><a data-toggle="pill" href="#vehicleInfo">Vehicle Information</a></li>
+								    <li><a data-toggle="pill" href="#insuranceInfo">Insurance Information</a></li>
+								    <li><a data-toggle="pill" href="#financeInfo">Finance Information</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="bg-white">
+							<div class="tab-content">
+						    <div id="customerInfo" class="tab-pane fade in active">
+						      <p class="portalHeading">Customer Information</p>
+						      <div class="portalForm m-t-20">
+						      	<form role="form" method="post" action="" autocomplete="off">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Enquiry Source<sup>*</sup></label>
+												<select class="form-control input-sm">
+													<option>XYZ</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">First Name<sup>*</sup></label>
+												<input type="text" class="form-control input-sm" name="">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Middle Name<sup>*</sup></label>
+												<input type="text" class="form-control input-sm" name="">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Last Name<sup>*</sup></label>
+												<input type="text" class="form-control input-sm" name="">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<label class="control-label">Phone Number<sup>*</sup></label>
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control input-sm" name="">
+													<span class="input-group-addon input-sm">
+														<span class="glyphicon glyphicon-phone"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<label class="control-label">Email Address<sup>*</sup></label>
+											<div class="form-group">
+												<div class="input-group">
+													<input type="email" class="form-control input-sm" name="">
+													<span class="input-group-addon input-sm">
+														<span class="fa fa-envelope-o"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">PAN No.<sup>*</sup></label>
+												<input type="text" class="form-control input-sm" name="">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<label class="control-label">Date of Birth</label>
+											<div class="form-group">
+												<div class="input-group date" id="datepicker2">
+													<input type="text" class="form-control input-sm" name="">
+													<span class="input-group-addon input-sm">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Father/Husband name</label>
+												<input type="text" class="form-control input-sm" name="">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<label class="control-label">Alternate Number</label>
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control input-sm" name="">
+													<span class="input-group-addon input-sm">
+														<span class="glyphicon glyphicon-phone"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="control-label">Address 1</label>
+												<textarea class="form-control input-sm" rows="2"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="control-label">Address 2</label>
+												<textarea class="form-control input-sm" rows="2"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">State/Region/Province</label>
+												<select class="form-control input-sm">
+													<option>Uttar Pradesh</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">City</label>
+												<select class="form-control input-sm">
+													<option>XYZ</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Postal/Zip Code</label>
+												<input type="text" class="form-control input-sm" name="">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-check">
+											  <input class="form-check-input" type="checkbox" value="">
+											  <label class="form-check-label">
+											    Same as Permanent Address
+											  </label>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="control-label">Address 1</label>
+												<textarea class="form-control input-sm" rows="2"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="control-label">Address 2</label>
+												<textarea class="form-control input-sm" rows="2"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">State/Region/Province</label>
+												<select class="form-control input-sm">
+													<option>Uttar Pradesh</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">City</label>
+												<select class="form-control input-sm">
+													<option>XYZ</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Postal/Zip Code</label>
+												<input type="text" class="form-control input-sm" name="">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<button type="submit" data-toggle="pill" href="#vehicleInfo" class="btn btnNext mb-2 pull-right">Next Step <i class="fa fa-angle-right"></i></button>
+										</div>
+									</div>
+						      	</form>
+						      </div>
+						    </div>
+						    <div id="vehicleInfo" class="tab-pane fade">
+						      <p class="portalHeading">Vehicle Information</p>
+						      <div class="portalForm m-t-20">
+						      	<form role="form" method="post" action="" autocomplete="off">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Vehicle<sup>*</sup></label>
+												<select class="form-control input-sm">
+													<option>Tata Harrier</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Model<sup>*</sup></label>
+												<select class="form-control input-sm">
+													<option>XZA Plus Dark Edition AT Diesal</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Color<sup>*</sup></label>
+												<select class="form-control input-sm">
+													<option>Telesto Gray</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Vehicle Ex-Showroom Price</label>
+												<select class="form-control input-sm">
+													<option>13,69,000.00</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Chassis No.</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="VBKMXL200YM510010">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Year of Manufacturing</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="24/06/2020">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Corporate Name & Type</label>
+												<select class="form-control input-sm">
+													<option>------</option>
+													<option>------</option>
+													<option>------</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Exchange Vehicle Detail</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="------">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Vehicle Sales Type</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="------">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Registration Type</label>
+												<select class="form-control input-sm">
+													<option>State Bank of India</option>
+													<option>PNB</option>
+													<option>ICICI</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<label class="control-label">Registration Amount</label>
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control input-sm" name="" placeholder="50,000.00">
+													<span class="input-group-addon input-sm">
+														<span class="fa fa-rupee"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<button type="submit" data-toggle="pill" href="#insuranceInfo" class="btn btnNext mb-2 pull-right">Next Step <i class="fa fa-angle-right"></i></button>
+											<button type="submit" data-toggle="pill" href="#customerInfo" class="btn btnPrev mb-2 pull-right"><i class="fa fa-angle-left"></i> Previous</button>
+										</div>
+									</div>
+						      	</form>
+								</div>
+						    </div>
+						    <div id="insuranceInfo" class="tab-pane fade">
+						      <p class="portalHeading">Insurance Information</p>
+						      <div class="portalForm m-t-20">
+						      	<form role="form" method="post" action="" autocomplete="off">
+									<div class="row">
+										<div class="col-md-4">
+											<label class="control-label">Insurance Amount <sup>*</sup></label>
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control input-sm" name="" placeholder="60,000.00">
+													<span class="input-group-addon input-sm">
+														<span class="fa fa-rupee"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Insurance Type</label>
+												<select class="form-control input-sm">
+													<option>3rd Partry</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Insurance Nominee Name</label>
+												<select class="form-control input-sm">
+													<option>Gyanendra Singh</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Nominee Age</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="30">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Nominee Relation</label>
+												<select class="form-control input-sm">
+													<option>Brother</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Insurance Policy No.</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="------">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Insurance Date</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="24/06/2020">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Insurance Expiry Date</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="24/06/2020">
+												<div class="form-check">
+												  <input class="form-check-input" type="checkbox" value="">
+												  <label class="form-check-label">
+												    <small>Alert on Expiry (Prior 15 days)</small>
+												  </label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+											    <label class="control-label">Upload Policy Document</label>
+											    <input type="file" class="form-control-file">
+											 </div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<button type="submit" data-toggle="pill" href="#financeInfo" class="btn btnNext mb-2 pull-right">Next Step <i class="fa fa-angle-right"></i></button>
+											<button type="submit" data-toggle="pill" href="#vehicleInfo" class="btn btnPrev mb-2 pull-right"><i class="fa fa-angle-left"></i> Previous</button>
+										</div>
+									</div>
+						      	</form>
+								</div>
+						    </div>
+						    <div id="financeInfo" class="tab-pane fade">
+						      <p class="portalHeading">Finance Information</p>
+						      <div class="portalForm m-t-20">
+						      	<form role="form" method="post" action="" autocomplete="off">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Purchase Mode</label>
+												<select class="form-control input-sm">
+													<option>Demand Draf</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Finance Bank Name</label>
+												<select class="form-control input-sm">
+													<option>State Bank of India</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Branch Address</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="Gomti Nagar">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Branch Address 2</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="-----">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">City</label>
+												<select class="form-control input-sm">
+													<option>Lucknow</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Loan Disbursal Amount</label>
+												<select class="form-control input-sm">
+													<option>80,00,000.00</option>
+													<option>XYZ</option>
+													<option>XYZ</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Expected Date of Delivery</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="24/06/2020">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="control-label">Insurance Expiry Date</label>
+												<input type="text" class="form-control input-sm" name="" placeholder="24/06/2020">
+												<div class="form-check">
+												  <input class="form-check-input" type="checkbox" value="">
+												  <label class="form-check-label">
+												    <small>Alert on Expiry (Prior 15 days)</small>
+												  </label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row" style="background-color: background-color: #e8e8e8; padding: 10px 10px 0px;">
+										<div class="col-md-3">
+											<span><small>Customer Associate</small></span>
+											<p>Gyanendra Singh</p>
+										</div>
+										<div class="col-md-2">
+											<span><small>ASM</small></span>
+											<p>Gyanendra Singh</p>
+										</div>
+										<div class="col-md-2">
+											<span><small>SM</small></span>
+											<p>Gyanendra Singh</p>
+										</div>
+										<div class="col-md-6">
+											&nbsp
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<button type="submit" class="btn btnSave mb-2 pull-right"><i class="fa fa-floppy-o"></i> Save</button>
+											<button type="submit" class="btn btnShare mb-2 pull-right"><i class="fa fa-share-alt"></i> Share</button>
+											<button type="submit" class="btn btnDownload mb-2 pull-right"><i class="fa fa-download"></i> Download PDF</button>
+										</div>
+									</div>
+						      	</form>
+								</div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /content -->
+<%- include ../layout/footer %>
+
+<script src="/js/shim.min.js"></script>
+<script src="/js/xlsx.full.min.js"></script>
+<script type="text/javascript">
+
+	$('#datepicker2').datepicker({
+		autoclose: true,
+		format: 'mm/dd/yyyy'
+	});
+</script>

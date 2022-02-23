@@ -1,0 +1,240 @@
+<%-include('../layout/header.ejs')%>
+<%-include('../layout/meta-setting.ejs')%>
+<%-include('../layout/nav.ejs')%>
+
+<!-- content1 -->
+<div id="content" class="app-content" role="main">
+<div class="app-content-body ">
+<div class="bg-light lter b-b wrapper-md">
+<h4 class="m-n font-thin " style="color:red;">Create Comapny</h4>
+</div>
+<div class="wrapper-md" ng-controller="FormDemoCtr5">
+    <form class="form-horizontal">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">Company  Information</div> 
+        <div class="panel-body">
+       
+          <div class="col-md-6 form-group">  
+            <label class="col-md-3 control-label">Comapny ID <span class="text-danger">*</span>:</label> 
+            <div class="col-md-9">
+              <input type="text" class="form-control" placeholder="" name="comapnyid">
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label class="col-md-3 control-label" style="padding-left: 0;">Comapny Owner: </label>
+            <div class="col-md-9">
+            <select name="companyowner" id="comapnyowner" class="form-control"  required>
+              <option  selected disabled>Comapny Owner </option>
+              <option value="">drs</option>
+              <option value="">vf</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select> 
+          </div>
+          </div>
+          <!-- <div class="col-md-6 form-group">  
+            <label class="col-md-3 control-label">Comapny Name:</label> 
+            <div class="col-md-9">
+              <input type="text" class="form-control" placeholder="Enter Comany Name" name="comapnyid">
+            </div>
+          </div> -->
+          
+
+          <div class="form-group  col-md-6 ">
+            <label class="control-label col-sm-3" >Company</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <span class="input-group-addon  " style="color:gray;font-size:20px;background:white; border-right:0px;"><i class="fa fa-building"></i></span>
+                <input type="text" class="form-control " aria-describedby="inputGroupSuccess2Status" placeholder="Enter Company" name="company" style="border-left:0px;">
+                
+            </div>
+            </div>
+          </div>    
+
+
+          <div class="form-group  col-md-6 ">
+            <label class="control-label col-sm-3" >Contact</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <span class="input-group-addon  " style="color:gray;font-size:20px;background:white; border-right:0px;"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control " aria-describedby="inputGroupSuccess2Status" placeholder="Select Contact" name="contact" style="border-left:0px;">
+                <span class="input-group-addon " style="color:red;font-size:20px;background:white;">+</span>
+            </div>
+            </div>
+          </div>    
+
+          
+       <div class="col-md-12 form-group">   
+        <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Logo:</label>
+        <div class="col-md-10 " style="width: 83.933379%;padding-left:6px;">
+            <div class="input-group">
+        <input type="text"  class="form-control " placeholder="Uplode your Company Logo " name="logo" style="font-size:12px; border-right:0px;" >
+        <span class="input-group-addon " style="border-left:0px; font-size:15px;background:white;"><a href="#" style="color:blue;text-decoration: underline;">Browser</a></span>
+        </div>  
+      </div>  
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">GST : </label>
+        </label> 
+        <div class="col-md-9">
+        <input type="text"  class="form-control " placeholder="Enter GST" name="gst"/>
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label class="col-md-3 control-label">PAN : </label>
+        </label> 
+      <div class="col-md-9">
+        <input type="text"  class="form-control " placeholder="Enter Pan" name="pan"/>
+      </div>
+      </div>
+      <div class="form-group  col-md-6 ">
+        <label class="control-label col-sm-3" for="inputGroupSuccess2">Phone No:</label>
+        <div class="col-sm-9">
+          <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input type="text" class="form-control" aria-describedby="inputGroupSuccess2Status" placeholder="Enter 10 digit Phone Number " name="phone">
+          </div>
+        </div>
+      </div>    
+
+      <div class="form-group  col-md-6 ">
+        <label class="control-label col-sm-3" for="inputGroupSuccess2">Mobile No:</label>
+        <div class="col-sm-9">
+          <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input type="text" class="form-control" aria-describedby="inputGroupSuccess2Status" placeholder="Enter 10 digit Mobile Number " name="mobile">
+          </div>
+        </div>
+      </div>    
+      <div class="col-md-6 form-group">
+         <label class="col-md-3 control-label">Email : </label>
+         </label> 
+         <div class="col-md-9">
+         <input type="text"  class="form-control " placeholder="Enter Email Address" name="tan"/>
+      </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label style="padding-left:0px;" class="col-md-3 control-label">Secondery Email: </label>
+        </label> 
+        <div class="col-md-9">
+        <input type="text"  class="form-control " placeholder="Enter Secondery Email " name="tan"/>
+      </div>
+      </div> 
+
+</div>
+</div>
+
+<!-- End content1 -->
+
+ <!--Start Conten2-->
+ <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">Address Information</div> 
+        <div class="panel-body">
+  
+          <div class="col-md-12 form-group">   
+            <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Address Line 1:  </label>
+          <div class="col-md-10" style="width: 86.733379%;padding-left:6px;">
+            <input type="text"  class="form-control " placeholder="Enter Your Completed Address" name="account_id"/>
+          </div>  
+          </div> 
+       
+          <div class="col-md-12 form-group">   
+            <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Address Line 2:  </label>
+          <div class="col-md-10" style="width: 86.733379%;padding-left:6px;">
+            <input type="text"  class="form-control " placeholder="Enter Your Completed Address" name="account_id"/>
+          </div>  
+          </div> 
+  
+          <div class="col-md-12 form-group">   
+            <label class="col-md-2 control-label" style="width: 13%;padding-left: 0;">Address Line 3:  </label>
+          <div class="col-md-10" style="width: 86.733379%;padding-left:6px;">
+            <input type="text"  class="form-control " placeholder="Enter Your Completed Address" name="account_id"/>
+          </div>  
+          </div>
+         
+          <div class="col-md-6 form-group">
+            <label class="col-md-3 control-label">Country  : </label>
+            <div class="col-md-9">
+            <select name="" id="" class="form-control"  required>
+              <option  selected disabled> Select Country  </option>
+              <option value="">drs</option>
+              <option value="">vf</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select> 
+          </div>
+          </div>
+    
+          <div class="col-md-6 form-group">
+            <label class="col-md-3 control-label">State   : </label>
+            <div class="col-md-9">
+            <select name="" id="" class="form-control"  required>
+              <option  selected disabled> Select State  </option>
+              <option value="">drs</option>
+              <option value="">vf</option>
+              <option value=""></option>
+            </select> 
+          </div>
+          </div>
+    
+          <div class="col-md-6 form-group">
+            <label class="col-md-3 control-label">City   : </label>
+            <div class="col-md-9">
+            <select name="" id="" class="form-control"  required>
+              <option  selected disabled> Select City </option>
+              <option value="">drs</option>
+              <option value="">vf</option>
+              <option value=""></option>
+            </select> 
+          </div>
+          </div>
+  
+          <div class="col-md-6 form-group">
+            <label class="col-md-3 control-label">Zip Code: </label>
+            </label> 
+          <div class="col-md-9">
+            <input type="text"  class="form-control " placeholder="Enter zip" name="zip"/>
+          </div>
+          </div>
+          </div>
+          </div>
+          <!------end content2-->
+          <!------start content3-->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="panel panel-default">
+                <div class="panel-heading font-bold">Remark :</div> 
+                <div class="panel-body">
+               
+                  <div class="col-md-12 form-group">  
+                    
+                      <input type="text" class="form-control" placeholder="Remark" name="deal ID">
+                    </div>
+                  </div>   
+                    
+        </div>
+        </div></div>
+      </form>
+      <div  style="text-align: right; margin:10px 0px;margin-right:16px;" >
+        <button type="cancel" class="btn btn-dark" >Cancel</button>
+        <button type="submit" class="btn btn-danger">Save</button>
+       
+        </div>
+        <!-- End content3 -->
+  </div>
+  </div>
+  </div>
+
+
+    
+<%-include('../layout/footer.ejs')%>  
